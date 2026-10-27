@@ -1,0 +1,30 @@
+﻿# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Credenciales
+*.pem
+*.key
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+
+# Resultados de pruebas
+coverage/
+test-results/
+
+# Archivos de compilacion
+dist/
+build/
