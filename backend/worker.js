@@ -164,6 +164,37 @@ export default {
             );
         }
 
+        const clientIp =
+            request.headers.get("CF-Connecting-IP");
+
+        if (!clientIp) {
+            return jsonResponse(
+                { error: "No fue posible identificar al cliente" },
+                403,
+                request
+            );
+        }
+
+        if (!env.CHAT_RATE_LIMITER) {
+            return jsonResponse(
+                { error: "Protección de solicitudes no configurada" },
+                503,
+                request
+            );
+        }
+
+        const rateLimit = await env.CHAT_RATE_LIMITER.limit({
+            key: clientIp
+        });
+
+        if (!rateLimit.success) {
+            return jsonResponse(
+                { error: "Demasiadas solicitudes. Intenta nuevamente en un minuto." },
+                429,
+                request
+            );
+        }
+
         if (!env.GROQ_API_KEY) {
             return jsonResponse(
                 { error: "Servicio no configurado" },
@@ -231,3 +262,4 @@ export default {
         }
     }
 };
+
