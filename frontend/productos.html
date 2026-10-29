@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos | NEXOTECH</title>
+
+    <meta name="description"
+          content="Explora accesorios y productos tecnológicos de NEXOTECH en Cartagena.">
+
+    <link rel="stylesheet" href="/css/design-system.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/catalog.css">
+</head>
+
+<body>
+
+    <header id="site-header"></header>
+
+    <main class="nx-catalog">
+
+        <section class="nx-catalog-hero">
+            <div class="container">
+
+                <span class="section-label">
+                    CATÁLOGO TECNOLÓGICO
+                </span>
+
+                <h1>
+                    Explora nuestra
+                    <span class="gradient-text">tecnología</span>
+                </h1>
+
+                <p>
+                    Descubre accesorios, componentes y soluciones
+                    tecnológicas disponibles bajo consulta.
+                </p>
+
+                <p class="nx-demo-notice">
+                    Catálogo académico de demostración.
+                    Los precios son ilustrativos y no constituyen ofertas comerciales.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="container nx-catalog-content">
+
+            <div class="nx-catalog-toolbar">
+
+                <label for="product-search" class="sr-only">
+                    Buscar productos
+                </label>
+
+                <input
+                    id="product-search"
+                    type="search"
+                    placeholder="Buscar productos..."
+                >
+
+                <label for="product-category" class="sr-only">
+                    Filtrar por categoría
+                </label>
+
+                <select id="product-category">
+                    <option value="Todos">Todas las categorías</option>
+                </select>
+
+                <label for="product-sort" class="sr-only">
+                    Ordenar productos
+                </label>
+
+                <select id="product-sort">
+                    <option value="default">Orden predeterminado</option>
+                    <option value="price-asc">Menor precio</option>
+                    <option value="price-desc">Mayor precio</option>
+                </select>
+
+            </div>
+
+            <p id="product-results" class="nx-results" aria-live="polite"></p>
+
+            <div id="products-grid" class="nx-products-grid"></div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>NEXOTECH</h3>
+                <p>Tecnología que conecta soluciones.</p>
+            </div>
+
+            <div>
+                <p>Cartagena, Colombia</p>
+                <p>© <span id="year"></span> NEXOTECH</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/productos.js"></script>
+
+</body>
+</html>
