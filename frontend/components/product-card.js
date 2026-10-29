@@ -2,7 +2,7 @@
     "Periféricos": "⌨",
     "Audio": "♫",
     "Almacenamiento": "▣",
-    "Accesorios": "◇"
+    "Accesorios": "◆"
 };
 
 export function formatPrice(price, currency = "COP") {
@@ -13,43 +13,92 @@ export function formatPrice(price, currency = "COP") {
     }).format(price);
 }
 
+function createElement(tag, className, text) {
+    const element = document.createElement(tag);
+
+    if (className) {
+        element.className = className;
+    }
+
+    if (text !== undefined) {
+        element.textContent = String(text);
+    }
+
+    return element;
+}
+
 export function createProductCard(product) {
-    const article = document.createElement("article");
+    const article = createElement("article", "nx-product-card");
 
-    article.className = "nx-product-card";
+    const image = createElement("div", "nx-product-image");
 
-    const icon = categoryIcons[product.category] || "◇";
+    const icon = createElement(
+        "span",
+        "nx-product-icon",
+        categoryIcons[product.category] || "◆"
+    );
 
-    article.innerHTML = `
-        <div class="nx-product-image">
-            <span class="nx-product-icon" aria-hidden="true">${icon}</span>
-            <span class="nx-product-badge">Bajo consulta</span>
-        </div>
+    icon.setAttribute("aria-hidden", "true");
 
-        <div class="nx-product-info">
-            <span class="nx-product-category">${product.category}</span>
+    const badge = createElement(
+        "span",
+        "nx-product-badge",
+        "Bajo consulta"
+    );
 
-            <h3>${product.name}</h3>
+    image.append(icon, badge);
 
-            <p>${product.description}</p>
+    const info = createElement("div", "nx-product-info");
 
-            <div class="nx-product-price">
-                ${formatPrice(product.price, product.currency)}
-            </div>
+    const category = createElement(
+        "span",
+        "nx-product-category",
+        product.category
+    );
 
-            <small class="nx-product-availability">
-                ${product.availability}
-            </small>
+    const title = createElement("h3", "", product.name);
 
-            <button
-                type="button"
-                class="nx-add-cart"
-                data-product-id="${product.id}"
-            >
-                Agregar al carrito
-            </button>
-        </div>
-    `;
+    const description = createElement(
+        "p",
+        "",
+        product.description
+    );
+
+    const price = createElement(
+        "div",
+        "nx-product-price",
+        formatPrice(product.price, product.currency)
+    );
+
+    const availability = createElement(
+        "small",
+        "nx-product-availability",
+        product.availability
+    );
+
+    const button = createElement(
+        "button",
+        "nx-add-cart",
+        "Agregar al carrito"
+    );
+
+    button.type = "button";
+    button.dataset.productId = product.id;
+
+    // El carrito se implementará en el siguiente sprint.
+    button.disabled = true;
+    button.title = "Carrito próximamente";
+
+    info.append(
+        category,
+        title,
+        description,
+        price,
+        availability,
+        button
+    );
+
+    article.append(image, info);
 
     return article;
 }
