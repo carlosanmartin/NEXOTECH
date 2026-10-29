@@ -1,0 +1,72 @@
+﻿/* ========================================
+   NEXOTECH PREMIUM DESIGN SYSTEM
+   Version: 2.0
+======================================== */
+
+:root {
+
+    /* Backgrounds */
+
+    --nx-bg: #07090f;
+    --nx-bg-secondary: #0e1422;
+    --nx-surface: #151d2e;
+    --nx-surface-hover: #1b2740;
+
+    /* Brand */
+
+    --nx-primary: #2563eb;
+    --nx-primary-light: #60a5fa;
+    --nx-secondary: #7c3aed;
+
+    /* Text */
+
+    --nx-text: #f8fafc;
+    --nx-text-muted: #94a3b8;
+    --nx-text-subtle: #64748b;
+
+    /* Borders */
+
+    --nx-border: rgba(255, 255, 255, 0.08);
+    --nx-border-active: rgba(96, 165, 250, 0.4);
+
+    /* Gradients */
+
+    --nx-gradient-brand:
+        linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+
+    --nx-gradient-surface:
+        linear-gradient(145deg, #151d2e 0%, #0e1422 100%);
+
+    /* Shadows */
+
+    --nx-shadow-card:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    --nx-shadow-glow:
+        0 0 45px rgba(37, 99, 235, 0.18);
+
+    /* Border radius */
+
+    --nx-radius-sm: 8px;
+    --nx-radius-md: 12px;
+    --nx-radius-lg: 18px;
+    --nx-radius-xl: 24px;
+
+    /* Spacing */
+
+    --nx-space-1: 4px;
+    --nx-space-2: 8px;
+    --nx-space-3: 12px;
+    --nx-space-4: 16px;
+    --nx-space-5: 24px;
+    --nx-space-6: 32px;
+    --nx-space-7: 48px;
+    --nx-space-8: 64px;
+
+    /* Motion */
+
+    --nx-transition-fast: 150ms ease;
+    --nx-transition-normal: 250ms ease;
+    --nx-transition-slow: 400ms ease;
+
+}
