@@ -211,3 +211,41 @@
         transition: none;
     }
 }
+
+/* ==========================================
+   MOBILE OPTIMIZATIONS
+========================================== */
+
+@media (max-width: 480px) {
+
+    .nx-navbar {
+        gap: 10px;
+    }
+
+    .nx-brand {
+        font-size: 1.05rem;
+        gap: 8px;
+    }
+
+    .nx-brand-symbol {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    .nx-header-actions {
+        gap: 12px;
+    }
+
+    .nx-menu-toggle {
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+
+    .nx-announcement .container {
+        justify-content: center;
+        text-align: center;
+    }
+
+}
