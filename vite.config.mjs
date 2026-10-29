@@ -5,7 +5,8 @@ export default defineConfig({
 
   server: {
     host: "127.0.0.1",
-    port: 5173
+    port: 5173,
+    strictPort: true
   },
 
   build: {
@@ -13,3 +14,4 @@ export default defineConfig({
     emptyOutDir: true
   }
 });
+
