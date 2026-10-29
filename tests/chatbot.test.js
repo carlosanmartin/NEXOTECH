@@ -1,5 +1,5 @@
-﻿import test from "node:test";
-import assert from "node:assert/strict";
+﻿import { test } from "vitest";
+import { strict as assert } from "node:assert";
 
 import worker from "../backend/worker.js";
 
@@ -74,3 +74,4 @@ test("No consulta Groq sin API key", async () => {
 
     assert.equal(data.error, "Servicio no configurado");
 });
+
