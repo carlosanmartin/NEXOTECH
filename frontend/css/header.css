@@ -1,0 +1,251 @@
+﻿.nx-announcement {
+    background: linear-gradient(90deg, #1d4ed8, #6d28d9);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nx-announcement .container {
+    min-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.nx-header-main {
+    background: rgba(7, 9, 15, 0.94);
+    border-bottom: 1px solid var(--nx-border);
+    backdrop-filter: blur(18px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nx-navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.nx-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.nx-brand strong {
+    color: var(--nx-primary-light);
+}
+
+.nx-brand-symbol {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--nx-gradient-brand);
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: var(--nx-shadow-glow);
+}
+
+.nx-navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nx-navigation a {
+    color: var(--nx-text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color var(--nx-transition-fast);
+}
+
+.nx-navigation a:hover {
+    color: var(--nx-text);
+}
+
+.nx-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nx-cart-button {
+    position: relative;
+    display: inline-flex;
+    color: var(--nx-text);
+}
+
+.nx-cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--nx-primary);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.nx-header-cta {
+    padding: 12px 20px;
+    background: var(--nx-gradient-brand);
+    border-radius: var(--nx-radius-md);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: transform var(--nx-transition-normal);
+}
+
+.nx-header-cta:hover {
+    transform: translateY(-2px);
+}
+
+.nx-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1050px) {
+
+    .nx-navigation {
+        gap: 15px;
+    }
+
+    .nx-header-cta {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .nx-announcement {
+        font-size: 0.65rem;
+    }
+
+    .nx-announcement .container span:last-child {
+        display: none;
+    }
+
+    .nx-navbar {
+        min-height: 72px;
+        flex-wrap: wrap;
+    }
+
+    .nx-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        padding: 9px;
+        background: transparent;
+        border: 1px solid var(--nx-border);
+        border-radius: 10px;
+        cursor: pointer;
+        order: 3;
+    }
+
+    .nx-menu-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: white;
+        border-radius: 2px;
+    }
+
+    .nx-navigation {
+        display: none;
+        order: 4;
+        width: 100%;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nx-navigation.is-open {
+        display: flex;
+    }
+
+    .nx-navigation a {
+        padding: 14px 8px;
+        border-bottom: 1px solid var(--nx-border);
+    }
+
+    .nx-header-actions {
+        margin-left: auto;
+    }
+
+}
+
+/* Accessibility: visible keyboard focus */
+
+.nx-navigation a:focus-visible,
+.nx-brand:focus-visible,
+.nx-cart-button:focus-visible,
+.nx-header-cta:focus-visible,
+.nx-menu-toggle:focus-visible {
+    outline: 3px solid var(--nx-primary-light);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nx-navigation a,
+    .nx-header-cta {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATIONS
+========================================== */
+
+@media (max-width: 480px) {
+
+    .nx-navbar {
+        gap: 10px;
+    }
+
+    .nx-brand {
+        font-size: 1.05rem;
+        gap: 8px;
+    }
+
+    .nx-brand-symbol {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    .nx-header-actions {
+        gap: 12px;
+    }
+
+    .nx-menu-toggle {
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+
+    .nx-announcement .container {
+        justify-content: center;
+        text-align: center;
+    }
+
+}

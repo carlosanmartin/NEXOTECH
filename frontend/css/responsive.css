@@ -120,3 +120,35 @@
     }
 
 }
+
+/* ==========================================
+   HERO MOBILE REFINEMENTS
+========================================== */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.1rem, 9vw, 2.7rem);
+        line-height: 1.12;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .hero-features {
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+
+    .hero-visual {
+        transform: scale(.5);
+        margin: -75px 0;
+    }
+
+}

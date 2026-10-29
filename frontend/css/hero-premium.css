@@ -1,0 +1,155 @@
+﻿/* ==========================================
+   NEXOTECH PREMIUM HERO
+========================================== */
+
+.nx-hero-showcase {
+    position: relative;
+    isolation: isolate;
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+}
+
+.nx-hero-light {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.nx-light-blue {
+    background: #2563eb;
+    top: 40px;
+    left: 20px;
+}
+
+.nx-light-purple {
+    background: #7c3aed;
+    bottom: 20px;
+    right: 0;
+}
+
+.nx-hero-grid {
+    position: absolute;
+    inset: 20px;
+    opacity: 0.13;
+    background-image:
+        linear-gradient(rgba(96,165,250,.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96,165,250,.4) 1px, transparent 1px);
+    background-size: 35px 35px;
+    mask-image: radial-gradient(circle, black, transparent 75%);
+}
+
+.nx-showcase-device {
+    position: relative;
+    z-index: 2;
+    width: min(115%, 640px);
+    filter: drop-shadow(0 30px 45px rgba(0,0,0,.55));
+    animation: nx-device-float 6s ease-in-out infinite;
+}
+
+.nx-showcase-device img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.nx-showcase-card {
+    position: absolute;
+    z-index: 3;
+    padding: 14px 18px;
+    border: 1px solid rgba(96,165,250,.25);
+    background: rgba(15,23,42,.78);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    color: white;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+.nx-card-performance {
+    top: 90px;
+    left: 0;
+}
+
+.nx-card-support {
+    right: 0;
+    bottom: 120px;
+}
+
+.nx-card-ai {
+    bottom: 55px;
+    left: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #93c5fd;
+}
+
+.nx-card-ai span {
+    font-size: .55rem;
+    color: #94a3b8;
+}
+
+.nx-card-indicator {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #22c55e;
+    margin-right: 8px;
+    box-shadow: 0 0 12px #22c55e;
+}
+
+@keyframes nx-device-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nx-hero-showcase {
+        min-height: 380px;
+        transform: none;
+        margin: 0;
+    }
+
+    .nx-showcase-device {
+        width: min(100%, 480px);
+    }
+
+    .nx-showcase-card {
+        padding: 10px 12px;
+        font-size: .58rem;
+    }
+
+    .nx-card-performance {
+        top: 40px;
+    }
+
+    .nx-card-support {
+        bottom: 60px;
+    }
+
+    .nx-card-ai {
+        bottom: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nx-showcase-device {
+        animation: none;
+    }
+
+}
