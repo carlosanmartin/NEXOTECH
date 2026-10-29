@@ -1,0 +1,231 @@
+﻿.nx-ai-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(37,99,235,.15), transparent 45%),
+        radial-gradient(circle at 90% 65%, rgba(124,58,237,.1), transparent 45%),
+        var(--nx-bg);
+    color: var(--nx-text);
+}
+
+.nx-ai-intro {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.nx-ai-intro h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin: 15px 0;
+}
+
+.nx-ai-intro p {
+    color: var(--nx-text-muted);
+    max-width: 650px;
+    margin: auto;
+}
+
+.nx-chat-layout {
+    max-width: 1050px;
+    padding-bottom: 90px;
+}
+
+.nx-chat-panel {
+    background: var(--nx-gradient-surface);
+    border: 1px solid var(--nx-border-active);
+    border-radius: 24px;
+    box-shadow: var(--nx-shadow-card), var(--nx-shadow-glow);
+    overflow: hidden;
+}
+
+.nx-chat-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--nx-border);
+}
+
+.nx-ai-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: var(--nx-gradient-brand);
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.nx-chat-header h2 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.nx-chat-header span {
+    font-size: .8rem;
+    color: var(--nx-text-muted);
+}
+
+.nx-ai-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22c55e;
+    margin-left: auto;
+    box-shadow: 0 0 15px rgba(34,197,94,.5);
+}
+
+.nx-chat-messages {
+    height: 430px;
+    overflow-y: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nx-message {
+    max-width: 82%;
+    padding: 16px 20px;
+    border-radius: 16px;
+    overflow-wrap: anywhere;
+}
+
+.nx-message-assistant {
+    align-self: flex-start;
+    background: rgba(37,99,235,.12);
+    border: 1px solid rgba(96,165,250,.15);
+}
+
+.nx-message-user {
+    align-self: flex-end;
+    background: var(--nx-gradient-brand);
+}
+
+.nx-message-label {
+    display: block;
+    font-size: .7rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    opacity: .8;
+}
+
+.nx-message p {
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+}
+
+.nx-chat-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 28px;
+    border-top: 1px solid var(--nx-border);
+}
+
+.nx-chat-suggestions button {
+    border: 1px solid var(--nx-border-active);
+    background: rgba(37,99,235,.1);
+    color: #bfdbfe;
+    padding: 10px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-size: .8rem;
+}
+
+.nx-chat-suggestions button:hover {
+    background: rgba(37,99,235,.25);
+}
+
+.nx-chat-form {
+    padding: 15px 28px;
+}
+
+.nx-chat-label {
+    display: block;
+    font-size: .8rem;
+    color: var(--nx-text-muted);
+    margin-bottom: 10px;
+}
+
+.nx-chat-input-row {
+    display: flex;
+    gap: 12px;
+}
+
+.nx-chat-input-row input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--nx-border-active);
+    background: var(--nx-bg-secondary);
+    color: white;
+    padding: 16px;
+    border-radius: 12px;
+    font: inherit;
+}
+
+.nx-chat-input-row button {
+    background: var(--nx-gradient-brand);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nx-chat-input-row button:disabled {
+    opacity: .5;
+    cursor: wait;
+}
+
+.nx-chat-disclaimer {
+    color: var(--nx-text-subtle);
+    font-size: .75rem;
+    text-align: center;
+    padding: 0 28px 22px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .nx-ai-intro {
+        padding-top: 40px;
+    }
+
+    .nx-chat-layout {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .nx-chat-header,
+    .nx-chat-messages,
+    .nx-chat-suggestions {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nx-chat-messages {
+        height: 380px;
+    }
+
+    .nx-message {
+        max-width: 95%;
+    }
+
+    .nx-chat-input-row button {
+        padding: 0 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nx-chat-suggestions button {
+        transition: none;
+    }
+}
+
+.nx-chat-suggestions button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}

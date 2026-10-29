@@ -1,12 +1,16 @@
 ﻿import { defineConfig } from "vite";
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath } from "node:url";
 
-const frontend = fileURLToPath(
-    new URL("./frontend/", import.meta.url)
-);
+function frontendPage(name) {
+    return fileURLToPath(
+        new URL(`./frontend/${name}`, import.meta.url)
+    );
+}
 
 export default defineConfig({
-    root: frontend,
+    root: fileURLToPath(
+        new URL("./frontend/", import.meta.url)
+    ),
 
     server: {
         host: "127.0.0.1",
@@ -20,12 +24,9 @@ export default defineConfig({
 
         rollupOptions: {
             input: {
-                main: fileURLToPath(
-                    new URL("./frontend/index.html", import.meta.url)
-                ),
-                productos: fileURLToPath(
-                    new URL("./frontend/productos.html", import.meta.url)
-                )
+                main: frontendPage("index.html"),
+                productos: frontendPage("productos.html"),
+                asistente: frontendPage("asistente.html")
             }
         }
     }

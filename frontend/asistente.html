@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXO AI | Asistente virtual NEXOTECH</title>
+
+    <meta name="description"
+          content="Conoce los productos y servicios de NEXOTECH con nuestro asistente virtual NEXO AI.">
+
+    <link rel="stylesheet" href="/css/design-system.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+</head>
+
+<body>
+
+    <header id="site-header"></header>
+
+    <main class="nx-ai-page">
+
+        <section class="nx-ai-intro">
+            <div class="container">
+
+                <span class="section-label">ASISTENTE INTELIGENTE</span>
+
+                <h1>Conoce a <span class="gradient-text">NEXO AI</span></h1>
+
+                <p>
+                    Tu asistente virtual para descubrir productos,
+                    servicios y soluciones tecnológicas de NEXOTECH.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="container nx-chat-layout"
+                 aria-label="Conversación con NEXO AI">
+
+            <div class="nx-chat-panel">
+
+                <div class="nx-chat-header">
+                    <div class="nx-ai-avatar" aria-hidden="true">N</div>
+
+                    <div>
+                        <h2>NEXO AI</h2>
+                        <span>Asistente virtual de NEXOTECH</span>
+                    </div>
+
+                    <span class="nx-ai-status" aria-label="Asistente disponible"></span>
+                </div>
+
+                <div
+                    id="chat-messages"
+                    class="nx-chat-messages"
+                    role="log"
+                    aria-live="polite"
+                    aria-relevant="additions"
+                ></div>
+
+                <div class="nx-chat-suggestions"
+                     aria-label="Preguntas sugeridas">
+
+                    <button type="button" data-question="¿Qué productos vende NEXOTECH?">
+                        Productos
+                    </button>
+
+                    <button type="button" data-question="¿Qué servicios técnicos ofrecen?">
+                        Servicios técnicos
+                    </button>
+
+                    <button type="button" data-question="¿Dónde está ubicado NEXOTECH?">
+                        Ubicación
+                    </button>
+
+                    <button type="button" data-question="¿Puedo solicitar productos bajo pedido?">
+                        Pedidos especiales
+                    </button>
+
+                </div>
+
+                <form id="chat-form" class="nx-chat-form">
+
+                    <label for="chat-input" class="nx-chat-label">
+                        Escribe tu pregunta
+                    </label>
+
+                    <div class="nx-chat-input-row">
+
+                        <input
+                            id="chat-input"
+                            type="text"
+                            maxlength="1000"
+                            autocomplete="off"
+                            placeholder="Pregúntale algo a NEXO AI..."
+                            required
+                        >
+
+                        <button id="chat-submit" type="submit">
+                            Enviar
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <p class="nx-chat-disclaimer">
+                    NEXO AI proporciona información orientativa.
+                    Los precios académicos son ilustrativos.
+                    La disponibilidad y las cotizaciones deben confirmarse.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="/js/chatbot.js"></script>
+
+</body>
+</html>
