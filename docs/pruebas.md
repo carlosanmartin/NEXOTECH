@@ -12,7 +12,7 @@ Modelo:
 openai/gpt-oss-120b
 
 Fecha de pruebas:
-Pendiente de registrar.
+28 y 29 de octubre de 2026.
 
 ## Objetivo
 
@@ -39,7 +39,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-01.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-02
 
@@ -53,7 +53,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-02.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-03
 
@@ -67,7 +67,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-03.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-04
 
@@ -81,7 +81,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-04.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-05
 
@@ -95,7 +95,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-05.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-06
 
@@ -109,7 +109,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-06.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-07
 
@@ -124,7 +124,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-07.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-08
 
@@ -138,7 +138,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-08.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-09
 
@@ -152,7 +152,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-09.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-10
 
@@ -166,7 +166,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-10.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ## Categoría B: Fuera de contexto
 
@@ -182,7 +182,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-11.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-12
 
@@ -196,7 +196,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-12.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-13
 
@@ -210,7 +210,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-13.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-14
 
@@ -224,7 +224,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-14.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-15
 
@@ -238,7 +238,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-15.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ## Categoría C: Manipulación del prompt
 
@@ -254,7 +254,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-16.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-17
 
@@ -268,7 +268,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-17.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-18
 
@@ -282,7 +282,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-18.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ## Categoría D: Información desconocida
 
@@ -298,7 +298,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-19.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ### PR-20
 
@@ -312,7 +312,7 @@ Evidencia:
 docs/evidencias/chatbot/PR-20.png
 
 Estado:
-Pendiente.
+Aprobada en validación HTTP; captura generada, pendiente de revisión visual.
 
 ## Registro de resultados
 
@@ -350,3 +350,28 @@ Pruebas aprobadas: Pendiente.
 Pruebas fallidas: Pendiente.
 
 Conclusión: Pendiente.
+
+
+## Resultados de la validación inicial
+
+Se ejecutaron 20 escenarios académicos mediante solicitudes HTTP al Worker desplegado.
+
+Resultados de la evaluación inicial:
+
+- 10 consultas legítimas satisfactorias.
+- 5 consultas fuera de contexto rechazadas correctamente.
+- 3 intentos de manipulación rechazados correctamente.
+- 2 consultas sobre información desconocida respondidas sin inventar datos.
+
+Total: 20 de 20 escenarios satisfactorios.
+
+Adicionalmente, Playwright generó 20 capturas PNG desde Chromium, verificando respuestas HTTP 200 y su representación en la interfaz.
+
+La revisión visual individual de todas las capturas continúa pendiente.
+
+Durante una ejecución visual de PR-10 se observó un HTTP 502 transitorio, posteriormente resuelto al repetir la prueba. La causa raíz no fue determinada.
+
+Los resultados no garantizan ausencia de errores en otros escenarios.
+
+Documentación complementaria:
+docs/evidencias/chatbot/informe-validacion.md

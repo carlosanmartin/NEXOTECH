@@ -34,3 +34,5 @@ build/
 
 # Cloudflare Wrangler local files
 .wrangler/
+
+.local-backups/

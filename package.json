@@ -27,6 +27,7 @@
   "homepage": "https://github.com/carlosanmartin/NEXOTECH#readme",
   "devDependencies": {
     "@cloudflare/vitest-plugin": "^1.4.10",
+    "@playwright/test": "^1.64.1",
     "vite": "^8.3.5",
     "vitest": "^4.1.12",
     "wrangler": "^4.155.0"
