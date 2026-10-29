@@ -2,5 +2,12 @@
   "name": "nexotech-ai",
   "main": "backend/worker.js",
   "compatibility_date": "2026-10-28",
-  "workers_dev": true
+  "workers_dev": true,
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.txt"],
+      "fallthrough": true
+    }
+  ]
 }
