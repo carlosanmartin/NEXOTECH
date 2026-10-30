@@ -1,4 +1,4 @@
-﻿import { businessKnowledge } from "./knowledge.js";
+import { businessKnowledge } from "./knowledge.js";
 import systemInstructions from "./prompts/nexo-ai-system.txt";
 
 const MODEL = "openai/gpt-oss-120b";
@@ -9,7 +9,8 @@ const MAX_REQUEST_BYTES = 4096;
 
 const ALLOWED_ORIGINS = new Set([
     "http://127.0.0.1:5173",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://nexotech-cartagena.infinityfreeapp.com"
 ]);
 
 function getCorsHeaders(request) {

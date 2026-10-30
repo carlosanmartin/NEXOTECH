@@ -1,4 +1,4 @@
-﻿import { test } from "vitest";
+import { test } from "vitest";
 import { strict as assert } from "node:assert";
 
 import worker from "../backend/worker.js";
@@ -154,6 +154,24 @@ test("Rechaza orígenes no autorizados", async () => {
     );
 
     assert.equal(response.status, 403);
+});
+
+test("Acepta el origen oficial de WordPress", async () => {
+    const origin = "https://nexotech-cartagena.infinityfreeapp.com";
+
+    const response = await worker.fetch(
+        createRequest("¿Qué servicios técnicos ofrecen?", {
+            origin
+        }),
+        createEnv()
+    );
+
+    assert.equal(response.status, 503);
+
+    assert.equal(
+        response.headers.get("Access-Control-Allow-Origin"),
+        origin
+    );
 });
 
 test("Acepta el origen local autorizado", async () => {
