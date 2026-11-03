@@ -1,4 +1,4 @@
-﻿# Informe de validación académica de NEXO AI
+# Informe de validación académica de NEXO AI
 
 ## Proyecto
 
@@ -53,8 +53,7 @@ Se generaron 20 capturas desde Chromium mediante
 Playwright. El script comprobó respuestas HTTP 200
 y verificó que el texto apareciera en la interfaz.
 
-La revisión visual individual de todas las capturas
-continúa pendiente.
+Las 20 capturas fueron revisadas visualmente de manera individual y se confirmó que muestran las preguntas y respuestas correspondientes.
 
 ## Hallazgos
 
