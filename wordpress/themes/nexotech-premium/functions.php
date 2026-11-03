@@ -67,3 +67,6 @@ function nexotech_theme_carrito_contador() {
     );
 }
 add_action('wp_enqueue_scripts', 'nexotech_theme_carrito_contador', 20);
+
+
+require_once get_template_directory() . '/chat-flotante.php';
