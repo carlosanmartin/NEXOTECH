@@ -1,0 +1,98 @@
+.nx-product {
+    padding: 60px 0 90px;
+}
+.nx-product-back {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #60a5fa;
+    font-weight: 700;
+}
+.nx-product-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+}
+.nx-product-image {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: #0e1422;
+    color: var(--text-secondary);
+}
+.nx-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nx-product-info h1 {
+    margin: 16px 0;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+.nx-product-price {
+    margin: 0 0 24px;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.nx-product-notice {
+    padding: 16px;
+    border: 1px solid rgba(96, 165, 250, .35);
+    border-radius: 12px;
+    background: rgba(37, 99, 235, .1);
+    color: var(--text-secondary);
+}
+.nx-product-description {
+    margin-top: 26px;
+    color: var(--text-secondary);
+}
+.nx-product-consult {
+    margin-top: 24px;
+    color: var(--text-secondary);
+}
+.nx-product a:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+@media (max-width: 750px) {
+    .nx-product {
+        padding: 40px 0 65px;
+    }
+    .nx-product-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+.nx-product-cart {
+    margin-top: 28px;
+}
+.nx-product-add {
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(110deg, #2563eb, #7c3aed);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.nx-product-add:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+.nx-product-add:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+.nx-product-cart-message {
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: .9rem;
+}

@@ -1,0 +1,58 @@
+.nx-store { padding: 70px 0 90px; }
+.nx-store-intro { max-width: 760px; margin-bottom: 42px; }
+.nx-store-intro h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    margin: 16px 0;
+}
+.nx-store-intro > p { color: var(--text-secondary); }
+.nx-store-notice {
+    margin-top: 22px;
+    padding: 14px 16px;
+    border: 1px solid rgba(96,165,250,.35);
+    border-radius: 12px;
+    background: rgba(37,99,235,.1);
+}
+.nx-store-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+.nx-store-card {
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+.nx-store-image {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    background: #0e1422;
+    color: var(--text-secondary);
+    overflow: hidden;
+}
+.nx-store-image img { width: 100%; height: 100%; object-fit: cover; }
+.nx-store-info { padding: 22px; }
+.nx-store-info h2 { font-size: 1.2rem; margin-bottom: 10px; }
+.nx-store-info p { color: var(--text-secondary); margin-bottom: 12px; }
+.nx-store-info .nx-store-price {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.nx-store-info small { display: block; color: var(--text-secondary); }
+.nx-store-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: #60a5fa;
+    font-weight: 700;
+}
+.nx-store a:focus-visible { outline: 3px solid #60a5fa; outline-offset: 3px; }
+@media (max-width: 850px) {
+    .nx-store-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+    .nx-store { padding: 45px 0 65px; }
+    .nx-store-grid { grid-template-columns: 1fr; }
+}

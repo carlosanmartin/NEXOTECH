@@ -1,0 +1,116 @@
+.nx-cart {
+    padding: 60px 0 90px;
+}
+.nx-cart-back {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #60a5fa;
+    font-weight: 700;
+}
+.nx-cart-intro h1 {
+    margin: 14px 0;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+.nx-cart-intro p {
+    color: var(--text-secondary);
+}
+.nx-cart-notice {
+    margin: 24px 0;
+    padding: 16px;
+    border: 1px solid rgba(96, 165, 250, .35);
+    border-radius: 12px;
+    background: rgba(37, 99, 235, .1);
+    color: var(--text-secondary);
+}
+.nx-cart-panel {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--bg-card);
+}
+.nx-cart-status {
+    color: var(--text-secondary);
+}
+.nx-cart a:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+@media (max-width: 520px) {
+    .nx-cart {
+        padding: 40px 0 65px;
+    }
+    .nx-cart-panel {
+        padding: 18px;
+    }
+}
+
+.nx-cart-item {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+.nx-cart-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.nx-cart-item h2 {
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
+}
+.nx-cart-item p {
+    margin-top: 8px;
+    color: var(--text-secondary);
+}
+.nx-cart-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.nx-cart-controls input {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #0e1422;
+    color: #fff;
+}
+.nx-cart-controls button,
+.nx-cart-retry {
+    padding: 9px 12px;
+    border: 1px solid #60a5fa;
+    border-radius: 8px;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+.nx-cart-summary {
+    padding-top: 20px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.nx-cart button:focus-visible,
+.nx-cart input:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+@media (max-width: 650px) {
+    .nx-cart-item {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 14px;
+    }
+    .nx-cart-item img {
+        width: 70px;
+        height: 70px;
+    }
+    .nx-cart-controls {
+        grid-column: 1 / -1;
+    }
+}
